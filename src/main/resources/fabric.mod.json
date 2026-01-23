@@ -1,0 +1,33 @@
+{
+	"schemaVersion": 1,
+	"id": "carpet-sdk-addition",
+	"version": "${version}",
+	"name": "Carpet SDK Addition",
+	"description": "This mod is a carpet addition for SDK minecraft server,it features some interesting and practical rules.",
+	"authors": [
+		"renzaifei"
+	],
+	"contact": {
+		"sources": "https://github.com/ren-zaifei/Carpet-SDK-Addition"
+	},
+	"license": "LGPLv3",
+	"icon": "assets/carpet-sdk-addition/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.renzaifei.carpetsdkaddition.CarpetSDKAddition"
+		],
+		"fabric-datagen": [
+			"com.renzaifei.carpetsdkaddition.CarpetSDKAdditionDataGenerator"
+		]
+	},
+	"mixins": [
+		"carpet-sdk-addition.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
