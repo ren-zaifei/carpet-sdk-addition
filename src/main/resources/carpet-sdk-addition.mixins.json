@@ -1,14 +1,14 @@
 {
-	"required": true,
-	"package": "com.renzaifei.carpetsdkaddition.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-
-	],
-	"injectors": {
-		"defaultRequire": 1
-	},
-	"overwrites": {
-		"requireAnnotations": true
+  "required": true,
+  "package": "com.renzaifei.carpetsdkaddition.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "flippinTotemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
 	}
 }

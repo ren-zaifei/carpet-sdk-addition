@@ -14,7 +14,7 @@ Carpet SDK Addition 是基于 Fabric 的 Carpet 模组扩展。它在原版 Carp
 > **注意**：本模组必须与 Carpet 模组一起使用（通过 Fabric API 间接依赖）。
 
 ## 特性
-- 暂无
+- 不死图腾扳手 使用不死图腾来改变方块朝向
 
 更多规则详情请查看源码或游戏内使用 `/carpet` 命令查询。
 

@@ -13,7 +13,7 @@ Carpet SDK Addition is a Fabric-based extension for the Carpet mod. It builds up
 
 ## Features
 
-- None yet
+- Flippin Totem  Use totem of undying to change block's facing.
 
 For details on available rules, please check the source code or use the `/carpet` command in-game to query them.
 
