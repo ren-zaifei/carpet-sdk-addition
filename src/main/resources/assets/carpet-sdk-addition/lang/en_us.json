@@ -1,6 +1,9 @@
 {
   "carpet.category.SDK": "SDK",
   "carpet.rule.flippinTotem.name": "Flippin Totem",
-  "carpet.rule.flippinTotem.desc": "Use totem of undying to change block's facing."
+  "carpet.rule.flippinTotem.desc": "Use totem of undying to change block's facing.",
+
+  "carpet.rule.betterPiglinAI.name": "Better Piglin AI",
+  "carpet.rule.betterPiglinAI.desc": "When the first item slot of a Piglin holds a golden carrot, it will retain only the trading AI."
 
 }

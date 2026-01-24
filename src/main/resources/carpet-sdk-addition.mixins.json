@@ -3,7 +3,8 @@
   "package": "com.renzaifei.carpetsdkaddition.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "flippinTotemMixin"
+    "flippinTotemMixin",
+    "entity.piglinBrainMixin"
   ],
   "injectors": {
     "defaultRequire": 1

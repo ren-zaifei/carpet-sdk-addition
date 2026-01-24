@@ -43,8 +43,7 @@ public class flippinTotemMixin {
             //这里需要加冷却，否则侦测器一类的会直接翻转两次，看着就像是没翻转
             //当现在的时间大于之前加冷却的时间时，才能再次触发
             if (!player.getAbilities().allowModifyWorld ||
-                    !SDK$playerHoldsTotemOfUndyingMainHand(player) ||
-                    !player.getOffHandStack().isEmpty()) {
+                    !SDK$playerHoldsTotemOfUndyingMainHand(player)) {
                 return;
             }
             //这里是实际加上冷却的地方
@@ -68,8 +67,7 @@ public class flippinTotemMixin {
     private static void postFlippinEligibility(Entity entity, @NotNull CallbackInfoReturnable<Boolean> cir) {
         if (!cir.getReturnValue() && CarpetSDKAdditionSettings.flippinTotem && (entity instanceof PlayerEntity)) {
             PlayerEntity player = (PlayerEntity) entity;
-            boolean ret = !player.getOffHandStack().isEmpty() && SDK$playerHoldsTotemOfUndyingMainHand(player);
-            cir.setReturnValue(ret);
+            cir.setReturnValue(SDK$playerHoldsTotemOfUndyingMainHand(player));
         }
     }
 }
