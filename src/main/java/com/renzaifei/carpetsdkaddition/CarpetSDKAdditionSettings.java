@@ -1,5 +1,6 @@
 package com.renzaifei.carpetsdkaddition;
 
+import carpet.CarpetServer;
 import carpet.api.settings.Rule;
 
 public class CarpetSDKAdditionSettings {
@@ -12,4 +13,5 @@ public class CarpetSDKAdditionSettings {
 	//猪灵AI优化
 	@Rule(categories = {SDK})
 	public static boolean betterPiglinAI = false;
+
 }

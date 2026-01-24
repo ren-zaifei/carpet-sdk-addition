@@ -4,6 +4,6 @@
   "carpet.rule.flippinTotem.desc": "使用不死图腾来改变方块朝向",
 
   "carpet.rule.betterPiglinAI.name": "更好的猪灵AI",
-  "carpet.rule.betterPiglinAI.desc": "猪灵的首格物品为金胡萝卜时，则只会保留交易AI"
+  "carpet.rule.betterPiglinAI.desc": "开启时生成的猪灵只保留了交易与恐吓移动功能"
 
 }
