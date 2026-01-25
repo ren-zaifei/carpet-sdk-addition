@@ -4,6 +4,6 @@
   "carpet.rule.flippinTotem.desc": "Use totem of undying to change block's facing.",
 
   "carpet.rule.betterPiglinAI.name": "Better Piglin AI",
-  "carpet.rule.betterPiglinAI.desc": "When activated, the spawned Piglins retain only the trading and intimidation movement functions."
+  "carpet.rule.betterPiglinAI.desc": "When activated, the Piglins retain only the trading functions."
 
 }

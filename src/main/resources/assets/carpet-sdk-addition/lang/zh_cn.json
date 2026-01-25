@@ -4,6 +4,6 @@
   "carpet.rule.flippinTotem.desc": "使用不死图腾来改变方块朝向",
 
   "carpet.rule.betterPiglinAI.name": "更好的猪灵AI",
-  "carpet.rule.betterPiglinAI.desc": "开启时生成的猪灵只保留了交易与恐吓移动功能"
+  "carpet.rule.betterPiglinAI.desc": "开启时猪灵将只保留了交易功能"
 
 }

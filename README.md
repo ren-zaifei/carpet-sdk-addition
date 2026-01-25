@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-LGPLv3-blue.svg)](https://opensource.org/licenses/LGPL-3.0)
 [![Fabric](https://img.shields.io/badge/Fabric-supported-orange.svg)](https://fabricmc.net)
 
-English version [docs](https://github.com/ren-zaifei/carpet-sdk-addition/README-EN.md)
+English version [docs](/README-EN.md)
 
 一个为 **SDK Minecraft 服务器** 量身定制的 Carpet 模组扩展，增加了多个有趣且实用的 Carpet 规则，帮助服务器管理者和玩家更好地优化游戏体验。
 
@@ -15,7 +15,7 @@ Carpet SDK Addition 是基于 Fabric 的 Carpet 模组扩展。它在原版 Carp
 
 ## 特性
 - 不死图腾扳手 使用不死图腾来改变方块朝向
-- 更好的猪灵AI 开启时生成的猪灵只保留了交易与恐吓移动功能
+- 更好的猪灵AI 开启时猪灵将只保留了交易功能
 
 更多规则详情请查看源码或游戏内使用 `/carpet` 命令查询。
 

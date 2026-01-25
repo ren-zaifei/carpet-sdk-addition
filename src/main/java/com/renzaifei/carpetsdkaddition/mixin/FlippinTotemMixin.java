@@ -18,7 +18,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(BlockRotator.class)
-public class flippinTotemMixin {
+public class FlippinTotemMixin {
     //借鉴了原pca的源码，并加以改进
 
     @Unique
