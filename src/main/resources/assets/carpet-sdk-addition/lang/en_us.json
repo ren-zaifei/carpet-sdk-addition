@@ -4,6 +4,8 @@
   "carpet.rule.flippinTotem.desc": "Use totem of undying to change block's facing.",
 
   "carpet.rule.betterPiglinAI.name": "Better Piglin AI",
-  "carpet.rule.betterPiglinAI.desc": "When triggered, a piglin that has picked up a golden carrot will retain only its bartering behavior."
+  "carpet.rule.betterPiglinAI.desc": "When triggered, a piglin that has picked up a golden carrot will retain only its bartering behavior.",
 
+  "carpet.rule.hightLightItem.name": "Hightlight All Items",
+  "carpet.rule.hightLightItem.desc": "When triggered, all items will be highlighted."
 }

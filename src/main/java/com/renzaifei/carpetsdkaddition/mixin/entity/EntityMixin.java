@@ -19,7 +19,7 @@ public abstract class EntityMixin {
     @Shadow
     public abstract EntityType<?> getType();
 
-
+    //猪灵AI优化
     @Inject(method = "move",at = @At(value = "HEAD"),cancellable = true)
     private void onMove(MovementType movementType, Vec3d movement, CallbackInfo ci){
         if (CarpetSDKAdditionSettings.betterPiglinAI){

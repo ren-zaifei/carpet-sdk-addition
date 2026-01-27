@@ -9,6 +9,9 @@
     "entity.EntityMixin",
     "entity.PiglinEntityMixin"
   ],
+  "client": [
+    "client.EntityMixin"
+  ],
   "injectors": {
     "defaultRequire": 1
   },
