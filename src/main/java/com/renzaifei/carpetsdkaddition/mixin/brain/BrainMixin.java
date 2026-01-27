@@ -1,6 +1,7 @@
 package com.renzaifei.carpetsdkaddition.mixin.brain;
 
 import com.renzaifei.carpetsdkaddition.CarpetSDKAdditionSettings;
+import com.renzaifei.carpetsdkaddition.access.PiglinEntityAccess;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.ai.brain.Brain;
@@ -16,7 +17,10 @@ public class BrainMixin {
     private void onTickSensors(ServerWorld world, LivingEntity entity, CallbackInfo ci){
         if (CarpetSDKAdditionSettings.betterPiglinAI){
             if (entity.getType() ==  EntityType.PIGLIN ){
-                ci.cancel();
+                PiglinEntityAccess access = (PiglinEntityAccess)entity;
+                if (access.isHasGoldenCarrot()){
+                    ci.cancel();
+                }
             }
         }
     }

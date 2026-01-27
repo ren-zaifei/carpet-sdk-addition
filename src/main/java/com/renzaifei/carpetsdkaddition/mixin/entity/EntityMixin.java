@@ -2,6 +2,7 @@ package com.renzaifei.carpetsdkaddition.mixin.entity;
 
 
 import com.renzaifei.carpetsdkaddition.CarpetSDKAdditionSettings;
+import com.renzaifei.carpetsdkaddition.access.PiglinEntityAccess;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.MovementType;
@@ -22,7 +23,9 @@ public abstract class EntityMixin {
     @Inject(method = "move",at = @At(value = "HEAD"),cancellable = true)
     private void onMove(MovementType movementType, Vec3d movement, CallbackInfo ci){
         if (CarpetSDKAdditionSettings.betterPiglinAI){
-            if (this.getType() == EntityType.PIGLIN){
+            if (this.getType() != EntityType.PIGLIN)return;
+            PiglinEntityAccess access = (PiglinEntityAccess)this;
+            if (access.isHasGoldenCarrot()){
                 ci.cancel();
             }
         }
