@@ -22,4 +22,8 @@ public class CarpetSDKAdditionSettings {
 	@Rule(categories = {SDK})
 	public static boolean fixEnderPearlTeleport = false;
 
+	//僵尸猪灵不踩碎海龟蛋
+	@Rule(categories = {SDK})
+	public static boolean cancelZombifiedPiglinsBreakEgg = false;
+
 }

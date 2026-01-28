@@ -9,7 +9,8 @@
     "entity.EnderPearlEntityMixin",
     "entity.EntityMixin",
     "entity.PiglinEntityMixin",
-    "entity.ProjectileEntityMixin"
+    "entity.ProjectileEntityMixin",
+    "entity.ZombieEntityMixin"
   ],
   "client": [
     "client.EntityMixin"
