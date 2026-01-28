@@ -1,0 +1,18 @@
+{
+  "carpet.category.SDK": "SDK",
+  "carpet.rule.flippinTotem.name": "不死图腾扳手",
+  "carpet.rule.flippinTotem.desc": "使用不死图腾来改变方块朝向",
+
+  "carpet.rule.betterPiglinAI.name": "更好的猪灵AI",
+  "carpet.rule.betterPiglinAI.desc": "开启时所有拾取了金胡萝卜的猪灵将只保留交易功能",
+
+  "carpet.rule.hightLightItem.name": "高亮掉落物",
+  "carpet.rule.hightLightItem.desc": "开启此规则时，将高亮所有的掉落物",
+
+  "carpet.rule.fixEnderPearlTeleport.name": "修复末影珍珠传送",
+  "carpet.rule.fixEnderPearlTeleport.desc": "修复了玩家退出存档或服务器后不重新亲自加载一次末影珍珠就无法传送的BUG",
+
+  "carpet.rule.cancelZombifiedPiglinsBreakEgg.name": "僵尸猪灵不踩碎海龟蛋",
+  "carpet.rule.cancelZombifiedPiglinsBreakEgg.desc": "僵尸猪灵不会搜寻海龟蛋并试图踩碎"
+
+}
