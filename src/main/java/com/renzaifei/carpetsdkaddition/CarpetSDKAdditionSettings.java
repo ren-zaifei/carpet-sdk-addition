@@ -17,4 +17,9 @@ public class CarpetSDKAdditionSettings {
 	@Rule(categories = {SDK})
 	public static boolean hightLightItem = false;
 
+	//1.21
+	//修复末影珍珠传送BUG
+	@Rule(categories = {SDK})
+	public static boolean fixEnderPearlTeleport = false;
+
 }

@@ -7,5 +7,8 @@
   "carpet.rule.betterPiglinAI.desc": "When triggered, a piglin that has picked up a golden carrot will retain only its bartering behavior.",
 
   "carpet.rule.hightLightItem.name": "Hightlight All Items",
-  "carpet.rule.hightLightItem.desc": "When triggered, all items will be highlighted."
+  "carpet.rule.hightLightItem.desc": "When triggered, all items will be highlighted.",
+
+  "carpet.rule.fixEnderPearlTeleport.name": "Fix EnderPearl Teleport",
+  "carpet.rule.fixEnderPearlTeleport.desc": "Fixed a bug where ender pearls would fail to teleport their owner if the player logged out and back in without personally reloading the pearl's chunk."
 }

@@ -6,8 +6,10 @@
     "FlippinTotemMixin",
     "brain.BrainMixin",
     "brain.PiglinBrainMixin",
+    "entity.EnderPearlEntityMixin",
     "entity.EntityMixin",
-    "entity.PiglinEntityMixin"
+    "entity.PiglinEntityMixin",
+    "entity.ProjectileEntityMixin"
   ],
   "client": [
     "client.EntityMixin"

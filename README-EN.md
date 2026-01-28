@@ -16,6 +16,7 @@ Carpet SDK Addition is a Fabric-based extension for the Carpet mod. It builds up
 - Flippin Totem  Use totem of undying to change block's facing.
 - Better Piglin AI  When triggered, a piglin that has picked up a golden carrot will retain only its bartering behavior.
 - Hight Light All Items  When triggered, all items will be highlighted.
+- Fix EnderPearl Teleport  Fixed a bug where ender pearls would fail to teleport their owner if the player logged out and back in without personally reloading the pearl's chunk.
 
 For details on available rules, please check the source code or use the `/carpet` command in-game to query them.
 
