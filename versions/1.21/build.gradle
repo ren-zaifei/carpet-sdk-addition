@@ -83,6 +83,7 @@ String fullModVersion = project.mod_version + versionSuffix
 
 version = 'v' + fullModVersion
 group = project.maven_group
+archivesBaseName = project.archives_base_name + '-mc' + project.minecraft_version
 
 String fabric_id = "fabric-api"
 
@@ -131,7 +132,6 @@ publishMods {
 
 
 jar {
-    archiveBaseName.set(project.archives_base_name+'-mc'+project.minecraft_version)
     from "LICENSE"
 }
 
