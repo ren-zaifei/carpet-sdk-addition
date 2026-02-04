@@ -1,10 +1,10 @@
 package com.renzaifei.carpetsdkaddition.mixin.entity;
 
 import com.renzaifei.carpetsdkaddition.CarpetSDKAdditionSettings;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.projectile.ProjectileEntity;
-import net.minecraft.entity.projectile.thrown.EnderPearlEntity;
-import net.minecraft.server.world.ServerWorld;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.Entity;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.ThrownEnderpearl;
 import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -14,30 +14,33 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 import java.util.UUID;
 
-@Mixin(ProjectileEntity.class)
-public abstract class ProjectileEntityMixin{
+@Mixin(Projectile.class)
+public abstract class ThrowableProjectileMixin {
+    //#if MC >= 12100 && MC <= 12101
 
     @Shadow
     @Nullable
-    private Entity owner;
+    private Entity cachedOwner;
 
     @Shadow
     @Nullable
-    private UUID ownerUuid;
+    private UUID ownerUUID;
+
 
     @Inject(method = "getOwner",at = @At("HEAD"),cancellable = true)
     private void getOwner(CallbackInfoReturnable<Entity> cir){
         if (CarpetSDKAdditionSettings.fixEnderPearlTeleport){
-            if ((Object)this instanceof EnderPearlEntity){
-                if (this.ownerUuid != null && ((ProjectileEntity)(Object)this).getWorld() instanceof ServerWorld serverWorld) {
-                    Entity entity = serverWorld.getEntity(this.ownerUuid);
+            if ((Object)this instanceof ThrownEnderpearl){
+                if (this.ownerUUID != null && ((Projectile)(Object)this).level() instanceof ServerLevel serverWorld) {
+                    Entity entity = serverWorld.getEntity(this.ownerUUID);
                     if (entity == null) {
-                        entity = serverWorld.getServer().getPlayerManager().getPlayer(this.ownerUuid);
+                        entity = serverWorld.getServer().getPlayerList().getPlayer(this.ownerUUID);
                     }
-                    this.owner = entity;
+                    this.cachedOwner = entity;
                     cir.setReturnValue(entity);
                 }
             }
         }
     }
+    //#endif
 }

@@ -17,10 +17,11 @@ public class CarpetSDKAdditionSettings {
 	@Rule(categories = {SDK})
 	public static boolean hightLightItem = false;
 
-	//1.21
+	//#if MC >= 12100 && MC <= 12101
 	//修复末影珍珠传送BUG
 	@Rule(categories = {SDK})
 	public static boolean fixEnderPearlTeleport = false;
+	//#endif
 
 	//僵尸猪灵不踩碎海龟蛋
 	@Rule(categories = {SDK})
