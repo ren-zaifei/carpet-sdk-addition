@@ -60,7 +60,7 @@ loom {
 
 JavaVersion SOURCE_JAVA_VERSION
 JavaVersion TARGET_JAVA_VERSION
-if (mcVersion >= 12005) {
+if (mcVersion >= 12100) {
     SOURCE_JAVA_VERSION = JavaVersion.VERSION_21
     TARGET_JAVA_VERSION = JavaVersion.VERSION_21
 }
@@ -116,8 +116,22 @@ java {
     targetCompatibility = TARGET_JAVA_VERSION
 }
 
+publishMods {
+    file = remapJar.archiveFile
+    changelog = "Changelog"
+    type = BETA
+    modLoaders.add("fabric")
+
+    modrinth {
+        accessToken = providers.environmentVariable("MODRINTH_TOKEN")
+        projectId = "Sub5yYXA"
+        minecraftVersions.add(project.game_versions)
+    }
+}
+
 
 jar {
+    archiveBaseName.set(project.archives_base_name+'-mc'+project.minecraft_version)
     from "LICENSE"
 }
 
