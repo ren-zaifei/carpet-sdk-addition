@@ -17,5 +17,5 @@
 
 
   "carpet.rule.reintroduceOlderPathfinding.name": "重新引入旧版寻路",
-  "carpet.rule.reintroduceOlderPathfinding.desc": "重新引入旧版基于世界时间的寻路机制"
+  "carpet.rule.reintroduceOlderPathfinding.desc": "重新引入旧版基于真实时间的寻路机制"
 }
