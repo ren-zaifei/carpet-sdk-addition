@@ -27,4 +27,8 @@ public class CarpetSDKAdditionSettings {
 	@Rule(categories = {SDK})
 	public static boolean cancelZombifiedPiglinsBreakEgg = false;
 
+	//重新引入旧版寻路
+	@Rule(categories = {SDK})
+	public static boolean reintroduceOlderPathfinding = false;
+
 }

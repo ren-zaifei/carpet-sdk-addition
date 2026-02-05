@@ -4,12 +4,13 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "FlippinTotemMixin",
+    "AI.PathNavigationMixin",
     "brain.BrainMixin",
     "brain.PiglinBrainMixin",
-    "entity.ThrownEnderpearlMixin",
     "entity.EntityMixin",
     "entity.PiglinMixin",
     "entity.ThrowableProjectileMixin",
+    "entity.ThrownEnderpearlMixin",
     "entity.ZombieEntityMixin"
   ],
   "client": [

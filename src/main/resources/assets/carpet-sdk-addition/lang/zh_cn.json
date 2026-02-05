@@ -13,6 +13,9 @@
   "carpet.rule.fixEnderPearlTeleport.desc": "修复了玩家退出存档或服务器后不重新亲自加载一次末影珍珠就无法传送的BUG",
 
   "carpet.rule.cancelZombifiedPiglinsBreakEgg.name": "僵尸猪灵不踩碎海龟蛋",
-  "carpet.rule.cancelZombifiedPiglinsBreakEgg.desc": "僵尸猪灵不会搜寻海龟蛋并试图踩碎"
+  "carpet.rule.cancelZombifiedPiglinsBreakEgg.desc": "僵尸猪灵不会搜寻海龟蛋并试图踩碎",
 
+
+  "carpet.rule.reintroduceOlderPathfinding.name": "重新引入旧版寻路",
+  "carpet.rule.reintroduceOlderPathfinding.desc": "重新引入旧版基于世界时间的寻路机制"
 }
