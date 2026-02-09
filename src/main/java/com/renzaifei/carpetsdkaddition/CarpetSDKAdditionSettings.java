@@ -17,6 +17,10 @@ public class CarpetSDKAdditionSettings {
 	@Rule(categories = {SDK})
 	public static boolean hightLightItem = false;
 
+	//生物高亮显示
+	@Rule(categories = {SDK})
+	public static boolean hightLightLivingEntity = false;
+
 	//#if MC >= 12100 && MC <= 12101
 	//修复末影珍珠传送BUG
 	@Rule(categories = {SDK})

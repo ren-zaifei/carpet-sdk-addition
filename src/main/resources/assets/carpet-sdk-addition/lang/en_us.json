@@ -16,5 +16,8 @@
   "carpet.rule.cancelZombifiedPiglinsBreakEgg.desc": "Zombified Piglins will not seek out and attempt to trample turtle eggs.",
 
   "carpet.rule.reintroduceOlderPathfinding.name": "Reintroduce the older version of pathfinding.",
-  "carpet.rule.reintroduceOlderPathfinding.desc": "Reintroduce the older version of the real-time-based pathfinding mechanism."
+  "carpet.rule.reintroduceOlderPathfinding.desc": "Reintroduce the older version of the real-time-based pathfinding mechanism.",
+
+  "carpet.rule.hightLightLivingEntity.name": "Hightlight All LivingEntity",
+  "carpet.rule.hightLightLivingEntity.desc": "When triggered, all LivingEntity will be highlighted."
 }
