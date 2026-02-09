@@ -35,4 +35,8 @@ public class CarpetSDKAdditionSettings {
 	@Rule(categories = {SDK})
 	public static boolean reintroduceOlderPathfinding = false;
 
+	//玩家坐下
+	@Rule(categories = {SDK})
+	public static boolean playerCanSit = false;
+
 }

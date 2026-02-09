@@ -7,8 +7,10 @@
     "AI.PathNavigationMixin",
     "brain.BrainMixin",
     "brain.PiglinBrainMixin",
+    "entity.ArmorStandMixin",
     "entity.EntityMixin",
     "entity.PiglinMixin",
+    "entity.ServerPlayerMixin",
     "entity.ThrowableProjectileMixin",
     "entity.ThrownEnderpearlMixin",
     "entity.ZombieEntityMixin"

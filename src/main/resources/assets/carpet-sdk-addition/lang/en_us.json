@@ -19,5 +19,8 @@
   "carpet.rule.reintroduceOlderPathfinding.desc": "Reintroduce the older version of the real-time-based pathfinding mechanism.",
 
   "carpet.rule.hightLightLivingEntity.name": "Hightlight All LivingEntity",
-  "carpet.rule.hightLightLivingEntity.desc": "When triggered, all LivingEntity will be highlighted."
+  "carpet.rule.hightLightLivingEntity.desc": "When triggered, all LivingEntity will be highlighted.",
+
+  "carpet.rule.playerCanSit.name": "Player Can Sit",
+  "carpet.rule.playerCanSit.desc": "You can sit down during continuous squats."
 }
