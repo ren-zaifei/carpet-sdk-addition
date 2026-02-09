@@ -3,6 +3,11 @@ package com.renzaifei.carpetsdkaddition.mixin.entity;
 import com.renzaifei.carpetsdkaddition.access.ArmorStandAccess;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
+//#if MC >= 12110
+//$$ import net.minecraft.server.level.ServerLevel;
+//$$ import net.minecraft.world.level.storage.ValueInput;
+//$$ import net.minecraft.world.level.storage.ValueOutput;
+//#endif
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
@@ -60,27 +65,46 @@ public abstract class ArmorStandMixin extends LivingEntity implements ArmorStand
     private void preRemovePassenger(Entity passenger, CallbackInfo ci) {
         if (this.isSitting()) {
             this.setPos(passenger.getX(), passenger.getY() + 1, passenger.getZ());
+            //#if MC < 12110
             this.kill();
+            //#else
+            //$$ this.kill((ServerLevel)(this.level()));
+            //#endif
         }
     }
+
 
     @Inject(
             method = "addAdditionalSaveData",
             at = @At("RETURN")
     )
+    //#if MC < 12110
     private void postAddAdditionalSaveData(CompoundTag nbt, CallbackInfo ci) {
         if (this.sitEntity) {
             nbt.putBoolean("SitEntity", true);
         }
     }
+    //#else
+    //$$ private void postAddAdditionalSaveData(ValueOutput valueOutput, CallbackInfo ci) {if (this.sitEntity) {valueOutput.putBoolean("SitEntity", true);}}
+    //#endif
+
 
     @Inject(
             method = "readAdditionalSaveData",
             at = @At("RETURN")
     )
+    //#if MC < 12110
     private void postReadAdditionalSaveData(@NotNull CompoundTag nbt, CallbackInfo ci) {
         if (nbt.contains("SitEntity", Tag.TAG_BYTE)) {
             this.sitEntity = nbt.getBoolean("SitEntity");
         }
     }
+    //#else
+    //$$ private void postReadAdditionalSaveData(ValueInput valueInput, CallbackInfo ci) {
+    //$$        this.sitEntity = valueInput.getBooleanOr("SitEntity", false);
+    //$$        if (this.sitEntity) {
+    //$$            this.sit(true);
+    //$$        }
+    //$$    }
+    //#endif
 }

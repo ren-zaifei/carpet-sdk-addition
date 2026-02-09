@@ -22,12 +22,23 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(ServerPlayer.class)
 public abstract class ServerPlayerMixin extends Player {
+    //#if MC < 12110
     public ServerPlayerMixin(Level level, BlockPos blockPos, float f, GameProfile gameProfile) {
         super(level, blockPos, f, gameProfile);
     }
+    //#else
+    //$$ public ServerPlayerMixin(Level level, GameProfile gameProfile) {
+    //$$        super(level, gameProfile);
+    //$$    }
+    //#endif
+
 
     @Shadow
+    //#if MC < 12110
     public abstract boolean startRiding(Entity entity, boolean bl);
+    //#else
+    //$$ public abstract boolean startRiding(Entity entity, boolean bl, boolean bl2);
+    //#endif
 
     @Shadow
     public ServerGamePacketListenerImpl connection;
@@ -81,8 +92,11 @@ public abstract class ServerPlayerMixin extends Player {
                             this.getId(), this.getEntityData().getNonDefaultValues()
                     ));
                 }
-
+                //#if MC < 12110
                 this.startRiding(armorStandEntity);
+                //#else
+                //$$ this.startRiding(armorStandEntity,true,false);
+                //#endif
                 this.sneakTimes = 0;
                 ci.cancel();
             }
