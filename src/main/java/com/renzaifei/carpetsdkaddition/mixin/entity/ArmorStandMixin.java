@@ -10,13 +10,11 @@ import net.minecraft.nbt.Tag;
 //$$ import net.minecraft.world.level.storage.ValueInput;
 //$$ import net.minecraft.world.level.storage.ValueOutput;
 //#endif
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.decoration.ArmorStand;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
-import org.spongepowered.asm.mixin.Intrinsic;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
@@ -52,29 +50,6 @@ public abstract class ArmorStandMixin extends LivingEntity implements ArmorStand
         this.setMarker(isSitting);
         this.setInvisible(isSitting);
     }
-
-    @Override
-    @Intrinsic
-    protected void removePassenger(Entity entity) {
-        super.removePassenger(entity);
-    }
-
-    @SuppressWarnings({"MixinAnnotationTarget", "UnresolvedMixinReference", "target"})
-    @Inject(
-            method = "removePassenger(Lnet/minecraft/world/entity/Entity;)V",
-            at = @At("HEAD")
-    )
-    private void preRemovePassenger(Entity passenger, CallbackInfo ci) {
-        if (this.isSitting()) {
-            this.setPos(passenger.getX(), passenger.getY() + 1, passenger.getZ());
-            //#if MC < 12102
-            this.kill();
-            //#else
-            //$$ this.kill((ServerLevel)(this.level()));
-            //#endif
-        }
-    }
-
 
     @Inject(
             method = "addAdditionalSaveData",
