@@ -3,8 +3,10 @@ package com.renzaifei.carpetsdkaddition.mixin.entity;
 import com.renzaifei.carpetsdkaddition.access.ArmorStandAccess;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
-//#if MC >= 12110
+//#if MC >= 12102
 //$$ import net.minecraft.server.level.ServerLevel;
+//#endif
+//#if MC >= 12110
 //$$ import net.minecraft.world.level.storage.ValueInput;
 //$$ import net.minecraft.world.level.storage.ValueOutput;
 //#endif
@@ -65,7 +67,7 @@ public abstract class ArmorStandMixin extends LivingEntity implements ArmorStand
     private void preRemovePassenger(Entity passenger, CallbackInfo ci) {
         if (this.isSitting()) {
             this.setPos(passenger.getX(), passenger.getY() + 1, passenger.getZ());
-            //#if MC < 12110
+            //#if MC < 12102
             this.kill();
             //#else
             //$$ this.kill((ServerLevel)(this.level()));
@@ -93,12 +95,18 @@ public abstract class ArmorStandMixin extends LivingEntity implements ArmorStand
             method = "readAdditionalSaveData",
             at = @At("RETURN")
     )
-    //#if MC < 12110
+    //#if MC < 12105
     private void postReadAdditionalSaveData(@NotNull CompoundTag nbt, CallbackInfo ci) {
         if (nbt.contains("SitEntity", Tag.TAG_BYTE)) {
             this.sitEntity = nbt.getBoolean("SitEntity");
         }
     }
+    //#elseif MC < 12110
+    //$$ private void postReadAdditionalSaveData(@NotNull CompoundTag nbt, CallbackInfo ci) {
+    //$$        if (nbt.contains("SitEntity")) {
+    //$$            this.sitEntity = nbt.getBooleanOr("SitEntity",false);
+    //$$        }
+    //$$    }
     //#else
     //$$ private void postReadAdditionalSaveData(ValueInput valueInput, CallbackInfo ci) {
     //$$        this.sitEntity = valueInput.getBooleanOr("SitEntity", false);
