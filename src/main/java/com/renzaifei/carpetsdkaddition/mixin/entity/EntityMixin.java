@@ -6,6 +6,7 @@ import com.renzaifei.carpetsdkaddition.access.ArmorStandAccess;
 import com.renzaifei.carpetsdkaddition.access.PiglinEntityAccess;
 import net.minecraft.Util;
 import net.minecraft.network.protocol.game.ClientboundSetEntityDataPacket;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -51,7 +52,7 @@ public abstract class EntityMixin{
                 //#if MC < 12102
                 armorStand.kill();
                 //#else
-                //$$ armorStand.kill((ServerLevel)(this.level()));
+                //$$ armorStand.kill((ServerLevel)(armorStand.level()));
                 //#endif
             }
         }
