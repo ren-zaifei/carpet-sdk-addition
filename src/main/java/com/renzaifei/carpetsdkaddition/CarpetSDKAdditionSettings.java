@@ -39,4 +39,8 @@ public class CarpetSDKAdditionSettings {
 	@Rule(categories = {SDK})
 	public static boolean playerCanSit = false;
 
+	//重新引入旧版潜影贝飞弹
+	@Rule(categories = {SDK})
+	public static boolean reintroduceOlderShulkerBullet = false;
+
 }

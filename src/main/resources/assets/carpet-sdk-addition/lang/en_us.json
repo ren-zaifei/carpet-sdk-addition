@@ -22,5 +22,9 @@
   "carpet.rule.hightLightLivingEntity.desc": "When triggered, all LivingEntity will be highlighted.",
 
   "carpet.rule.playerCanSit.name": "Player Can Sit",
-  "carpet.rule.playerCanSit.desc": "You can sit down during continuous squats."
+  "carpet.rule.playerCanSit.desc": "You can sit down during continuous squats.",
+
+  "carpet.rule.reintroduceOlderShulkerBullet.name": "Reintroduce Older ShulkerBullet.",
+  "carpet.rule.reintroduceOlderShulkerBullet.desc": "Reintroduce the 1.21- version of ShulkerBullet."
+
 }

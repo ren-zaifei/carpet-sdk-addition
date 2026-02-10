@@ -10,6 +10,7 @@
     "entity.ArmorStandMixin",
     "entity.EntityMixin",
     "entity.PiglinMixin",
+    "entity.ShulkerBulletMixin",
     "entity.ThrowableProjectileMixin",
     "entity.ThrownEnderpearlMixin",
     "entity.ZombieEntityMixin"

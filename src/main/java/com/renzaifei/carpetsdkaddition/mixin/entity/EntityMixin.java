@@ -43,6 +43,7 @@ public abstract class EntityMixin{
         }
     }
 
+    //玩家坐下
     @Inject(method = "removePassenger",at = @At("HEAD"))
     private void onRemovePassenger(Entity passenger, CallbackInfo ci){
         if (!CarpetSDKAdditionSettings.playerCanSit) return;
@@ -57,7 +58,7 @@ public abstract class EntityMixin{
             }
         }
     }
-
+    //玩家坐下
     @Inject(method = "setShiftKeyDown",at = @At("HEAD"),cancellable = true)
     private void onSetShiftKeyDown(boolean sneaking, CallbackInfo ci){
         if (!CarpetSDKAdditionSettings.playerCanSit || (sneaking && ((Entity)(Object)this).isShiftKeyDown())) {

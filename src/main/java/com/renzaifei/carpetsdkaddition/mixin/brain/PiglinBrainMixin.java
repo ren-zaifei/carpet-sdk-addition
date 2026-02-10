@@ -3,6 +3,7 @@ package com.renzaifei.carpetsdkaddition.mixin.brain;
 
 import com.renzaifei.carpetsdkaddition.CarpetSDKAdditionSettings;
 import com.renzaifei.carpetsdkaddition.access.PiglinEntityAccess;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
@@ -45,13 +46,19 @@ public abstract class PiglinBrainMixin {
         }
         cir.setReturnValue(false);
     }
+
     @Inject(method = "pickUpItem",at = @At("HEAD"))
+    //#if MC <= 12101
     private static void onpickUpItem(Piglin piglin, ItemEntity itemEntity, CallbackInfo ci){
+    //#else
+    //$$ private static void onpickUpItem(ServerLevel serverLevel,Piglin piglin, ItemEntity itemEntity, CallbackInfo ci){
+    //#endif
         if (!check())return;
         PiglinEntityAccess access = (PiglinEntityAccess)piglin;
         if (!itemEntity.getItem().is(Items.GOLDEN_CARROT)) return;
         access.setHasGoldenCarrot(true);
     }
+
     @Inject(method = "updateActivity",at = @At("HEAD"),cancellable = true)
     private static void onupdateActivity(Piglin piglin, CallbackInfo ci){
         if (!check())return;

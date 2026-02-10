@@ -22,5 +22,8 @@
   "carpet.rule.hightLightLivingEntity.desc": "开启此规则时，将高亮所有的生物",
 
   "carpet.rule.playerCanSit.name": "玩家坐下",
-  "carpet.rule.playerCanSit.desc": "连续下蹲时可以坐下"
+  "carpet.rule.playerCanSit.desc": "连续下蹲时可以坐下",
+
+  "carpet.rule.reintroduceOlderShulkerBullet.name": "重新引入旧版潜影贝飞弹",
+  "carpet.rule.reintroduceOlderShulkerBullet.desc": "恢复了1.21-的潜影贝飞弹逻辑"
 }
