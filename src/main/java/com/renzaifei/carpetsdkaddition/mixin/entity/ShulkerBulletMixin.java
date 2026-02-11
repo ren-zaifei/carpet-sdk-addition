@@ -38,7 +38,11 @@ public class ShulkerBulletMixin {
                     shift = At.Shift.BEFORE),
             locals = LocalCapture.CAPTURE_FAILSOFT
     )
+    //#if MC < 12106
     private void onselectNextMoveDirection(Direction.Axis axis, CallbackInfo ci, BlockPos blockPos, double d, double e, double f, double g, Direction direction, BlockPos blockPos2, List<Direction> list){
+    //#else
+    //$$ private void onselectNextMoveDirection(Direction.Axis axis, Entity entity,CallbackInfo ci, BlockPos blockPos, double d, double e, double f, double g, Direction direction, BlockPos blockPos2, List<Direction> list){
+    //#endif
         if (CarpetSDKAdditionSettings.reintroduceOlderShulkerBullet){
             ShulkerBullet shulkerBullet = (ShulkerBullet)(Object)this;
             list.clear();
