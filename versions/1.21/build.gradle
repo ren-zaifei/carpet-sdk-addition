@@ -119,7 +119,7 @@ java {
 
 publishMods {
     file = remapJar.archiveFile
-    changelog = "Changelog"
+    changelog = "修复部分BUG,增加了版本显示"
     type = BETA
     modLoaders.add("fabric")
 

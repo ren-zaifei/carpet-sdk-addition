@@ -3,10 +3,11 @@
   "package": "com.renzaifei.carpetsdkaddition.mixin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
-    "FlippinTotemMixin",
+    "carpet.FlippinTotemMixin",
     "AI.PathNavigationMixin",
     "brain.BrainMixin",
     "brain.PiglinBrainMixin",
+    "carpet.SettingsManagerMixin",
     "entity.ArmorStandMixin",
     "entity.EntityMixin",
     "entity.PiglinMixin",

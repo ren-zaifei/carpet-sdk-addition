@@ -1,4 +1,4 @@
-package com.renzaifei.carpetsdkaddition.mixin;
+package com.renzaifei.carpetsdkaddition.mixin.carpet;
 
 import carpet.CarpetSettings;
 import carpet.helpers.BlockRotator;

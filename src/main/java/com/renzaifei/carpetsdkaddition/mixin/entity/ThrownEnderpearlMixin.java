@@ -2,13 +2,10 @@ package com.renzaifei.carpetsdkaddition.mixin.entity;
 
 
 import com.renzaifei.carpetsdkaddition.CarpetSDKAdditionSettings;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.entity.projectile.ThrownEnderpearl;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.Level;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -27,13 +24,7 @@ public class ThrownEnderpearlMixin extends ThrowableItemProjectile {
     @Inject(method = "tick",at = @At("HEAD"), cancellable = true)
     private void onEnderPearlEntityTick(CallbackInfo ci) {
         if (CarpetSDKAdditionSettings.fixEnderPearlTeleport){
-            ThrownEnderpearl enderpearl = (ThrownEnderpearl)(Object)this;
-            Entity entity = enderpearl.getOwner();
-            if (entity instanceof ServerPlayer && enderpearl.level().getGameRules().getBoolean(GameRules.RULE_ENDER_PEARLS_VANISH_ON_DEATH)){
-                enderpearl.discard();
-            } else {
-                super.tick();
-            }
+            super.tick();
             ci.cancel();
         }
     }

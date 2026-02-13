@@ -20,4 +20,9 @@ public class CarpetSDKAdditionExtension implements CarpetExtension {
     public Map<String, String> canHasTranslations(String lang) {
         return CarpetSDKAdditionTranslations.getTranslations(lang);
     }
+
+    @Override
+    public String version() {
+        return CarpetSDKAddition.version;
+    }
 }
