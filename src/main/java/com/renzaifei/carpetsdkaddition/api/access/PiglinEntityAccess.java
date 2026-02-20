@@ -1,4 +1,4 @@
-package com.renzaifei.carpetsdkaddition.access;
+package com.renzaifei.carpetsdkaddition.api.access;
 
 public interface PiglinEntityAccess {
     boolean isHasGoldenCarrot();

@@ -1,6 +1,6 @@
 package com.renzaifei.carpetsdkaddition.mixin.entity;
 
-import com.renzaifei.carpetsdkaddition.access.ArmorStandAccess;
+import com.renzaifei.carpetsdkaddition.api.access.ArmorStandAccess;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.nbt.Tag;
 //#if MC >= 12102

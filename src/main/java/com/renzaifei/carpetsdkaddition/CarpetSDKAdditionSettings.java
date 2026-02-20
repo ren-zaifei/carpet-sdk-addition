@@ -43,4 +43,12 @@ public class CarpetSDKAdditionSettings {
 	@Rule(categories = {SDK})
 	public static boolean reintroduceOlderShulkerBullet = false;
 
+	//强制生成离线假人
+	@Rule(categories = {SDK})
+	public static boolean forcefullyGenerateOfflineFakePlayer = false;
+
+	//发射器收集经验
+	@Rule(categories = {SDK})
+	public static boolean dispenserCollectXp = false;
+
 }

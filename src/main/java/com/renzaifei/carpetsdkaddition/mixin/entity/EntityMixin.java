@@ -2,11 +2,10 @@ package com.renzaifei.carpetsdkaddition.mixin.entity;
 
 
 import com.renzaifei.carpetsdkaddition.CarpetSDKAdditionSettings;
-import com.renzaifei.carpetsdkaddition.access.ArmorStandAccess;
-import com.renzaifei.carpetsdkaddition.access.PiglinEntityAccess;
+import com.renzaifei.carpetsdkaddition.api.access.ArmorStandAccess;
+import com.renzaifei.carpetsdkaddition.api.access.PiglinEntityAccess;
 import net.minecraft.Util;
 import net.minecraft.network.protocol.game.ClientboundSetEntityDataPacket;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
@@ -19,6 +18,7 @@ import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
+import net.minecraft.server.level.ServerLevel;
 
 @Mixin(Entity.class)
 public abstract class EntityMixin{

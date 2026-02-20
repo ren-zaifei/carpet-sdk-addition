@@ -1,7 +1,7 @@
 {
   "carpet.category.SDK": "SDK",
   "carpet.rule.flippinTotem.name": "Flippin Totem",
-  "carpet.rule.flippinTotem.desc": "Use totem of undying to change block's facing.",
+  "carpet.rule.flippinTotem.desc": "(Code porting to pca)Use totem of undying to change block's facing.",
 
   "carpet.rule.betterPiglinAI.name": "Better Piglin AI",
   "carpet.rule.betterPiglinAI.desc": "When triggered, a piglin that has picked up a golden carrot will retain only its bartering behavior.",
@@ -22,9 +22,15 @@
   "carpet.rule.hightLightLivingEntity.desc": "When triggered, all LivingEntity will be highlighted.",
 
   "carpet.rule.playerCanSit.name": "Player Can Sit",
-  "carpet.rule.playerCanSit.desc": "You can sit down during continuous squats.",
+  "carpet.rule.playerCanSit.desc": "(Code porting to pca)You can sit down during continuous squats.",
 
   "carpet.rule.reintroduceOlderShulkerBullet.name": "Reintroduce Older ShulkerBullet.",
-  "carpet.rule.reintroduceOlderShulkerBullet.desc": "Reintroduce the 1.21- version of ShulkerBullet."
+  "carpet.rule.reintroduceOlderShulkerBullet.desc": "Reintroduce the 1.21- version of ShulkerBullet.",
+
+  "carpet.rule.forcefullyGenerateOfflineFakePlayer.name": "Forcefully generate offline fake player",
+  "carpet.rule.forcefullyGenerateOfflineFakePlayer.desc": "Bypass network requests when generating a fake player, and directly generate an offline fake player.",
+
+  "carpet.rule.dispenserCollectXp.name": "dispenserCollectXp",
+  "carpet.rule.dispenserCollectXp.desc": "(Code porting to pca)Dispenser use bottle to collect xp."
 
 }

@@ -1,7 +1,7 @@
 {
   "carpet.category.SDK": "SDK",
   "carpet.rule.flippinTotem.name": "不死图腾扳手",
-  "carpet.rule.flippinTotem.desc": "使用不死图腾来改变方块朝向",
+  "carpet.rule.flippinTotem.desc": "(移植自pca)使用不死图腾来改变方块朝向",
 
   "carpet.rule.betterPiglinAI.name": "更好的猪灵AI",
   "carpet.rule.betterPiglinAI.desc": "开启时所有拾取了金胡萝卜的猪灵将只保留交易功能",
@@ -22,8 +22,14 @@
   "carpet.rule.hightLightLivingEntity.desc": "开启此规则时，将高亮所有的生物",
 
   "carpet.rule.playerCanSit.name": "玩家坐下",
-  "carpet.rule.playerCanSit.desc": "连续下蹲时可以坐下",
+  "carpet.rule.playerCanSit.desc": "(移植自pca)连续下蹲时可以坐下",
 
   "carpet.rule.reintroduceOlderShulkerBullet.name": "重新引入旧版潜影贝飞弹",
-  "carpet.rule.reintroduceOlderShulkerBullet.desc": "恢复了1.21-的潜影贝飞弹逻辑"
+  "carpet.rule.reintroduceOlderShulkerBullet.desc": "恢复了1.21-的潜影贝飞弹逻辑",
+
+  "carpet.rule.forcefullyGenerateOfflineFakePlayer.name": "强制生成离线假人",
+  "carpet.rule.forcefullyGenerateOfflineFakePlayer.desc": "绕过假人生成时的网络请求，直接生成离线假人",
+
+  "carpet.rule.dispenserCollectXp.name": "发射器收集经验",
+  "carpet.rule.dispenserCollectXp.desc": "(移植自pca)在发射器中使用空瓶收集经验"
 }

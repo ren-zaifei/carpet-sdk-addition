@@ -1,6 +1,7 @@
 package com.renzaifei.carpetsdkaddition;
 
 import carpet.CarpetServer;
+import com.renzaifei.carpetsdkaddition.rules.dispenserCollectXp.GlassBottleDispenserBehavior;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.loader.api.FabricLoader;
 
@@ -14,5 +15,6 @@ public class CarpetSDKAddition implements ModInitializer{
 	public void onInitialize() {
 		version = FabricLoader.getInstance().getModContainer(MOD_ID).orElseThrow(RuntimeException::new).getMetadata().getVersion().getFriendlyString();
 		CarpetServer.manageExtension(new CarpetSDKAdditionExtension());
+		GlassBottleDispenserBehavior.init();
 	}
 }

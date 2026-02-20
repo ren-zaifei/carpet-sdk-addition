@@ -1,7 +1,7 @@
 package com.renzaifei.carpetsdkaddition.mixin.entity;
 
 import com.renzaifei.carpetsdkaddition.CarpetSDKAdditionSettings;
-import com.renzaifei.carpetsdkaddition.access.PiglinEntityAccess;
+import com.renzaifei.carpetsdkaddition.api.access.PiglinEntityAccess;
 import net.minecraft.world.entity.monster.piglin.Piglin;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;

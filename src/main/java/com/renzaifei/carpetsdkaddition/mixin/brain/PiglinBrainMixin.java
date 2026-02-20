@@ -2,7 +2,7 @@ package com.renzaifei.carpetsdkaddition.mixin.brain;
 
 
 import com.renzaifei.carpetsdkaddition.CarpetSDKAdditionSettings;
-import com.renzaifei.carpetsdkaddition.access.PiglinEntityAccess;
+import com.renzaifei.carpetsdkaddition.api.access.PiglinEntityAccess;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.monster.piglin.Piglin;
