@@ -10,6 +10,7 @@ import net.minecraft.world.entity.monster.piglin.PiglinAi;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import org.spongepowered.asm.mixin.Mixin;
+import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -20,6 +21,9 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(PiglinAi.class)
 public abstract class PiglinBrainMixin {
+
+    @Shadow
+    private static boolean isNotHoldingLovedItemInOffHand(Piglin piglin){return true;}
 
     @Unique
     private static boolean check(){
@@ -41,7 +45,7 @@ public abstract class PiglinBrainMixin {
             return;
         }
         if (itemStack.is(Items.GOLD_INGOT)) {
-            cir.setReturnValue(true);
+            cir.setReturnValue(isNotHoldingLovedItemInOffHand(piglin));
             return;
         }
         cir.setReturnValue(false);

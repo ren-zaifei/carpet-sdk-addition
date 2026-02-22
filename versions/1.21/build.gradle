@@ -119,7 +119,7 @@ java {
 
 publishMods {
     file = remapJar.archiveFile
-    changelog = "New rule：Forcefully generate offline fake player& dispenserCollectXp"
+    changelog = "Fix BetterPiglinAI BUG"
     type = BETA
     modLoaders.add("fabric")
 
