@@ -119,7 +119,7 @@ java {
 
 publishMods {
     file = remapJar.archiveFile
-    changelog = "Fix BetterPiglinAI BUG"
+    changelog = "Fix Some BUG"
     type = BETA
     modLoaders.add("fabric")
 

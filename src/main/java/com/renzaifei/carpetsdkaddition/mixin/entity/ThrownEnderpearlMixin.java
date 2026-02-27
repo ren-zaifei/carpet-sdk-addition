@@ -20,8 +20,8 @@ public class ThrownEnderpearlMixin extends ThrowableItemProjectile {
         super(entityType, level);
     }
 
-    //#if MC >= 12100 && MC <= 12101
-    @Inject(method = "tick",at = @At("HEAD"), cancellable = true)
+    //#if MC <= 12101
+    @Inject(method = "tick",at = @At("HEAD"),order = 9999, cancellable = true)
     private void onEnderPearlEntityTick(CallbackInfo ci) {
         if (CarpetSDKAdditionSettings.fixEnderPearlTeleport){
             super.tick();
