@@ -17,7 +17,7 @@ import java.util.UUID;
 @Mixin(Projectile.class)
 public abstract class ThrowableProjectileMixin {
 
-
+    //#if MC <= 12101
     @Shadow
     @Nullable
     private Entity cachedOwner;
@@ -26,7 +26,6 @@ public abstract class ThrowableProjectileMixin {
     @Nullable
     private UUID ownerUUID;
 
-    //#if MC <= 12101
     @Inject(method = "getOwner",at = @At("HEAD"),order = 9999, cancellable = true)
     private void getOwner(CallbackInfoReturnable<Entity> cir){
         if (CarpetSDKAdditionSettings.fixEnderPearlTeleport){
