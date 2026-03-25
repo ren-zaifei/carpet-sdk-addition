@@ -12,7 +12,7 @@
 	},
 	"accessWidener": "csdk.accesswidener",
 	"license": "LGPLv3",
-	"icon": "assets/carpet-sdk-addition/icon.png",
+	"icon": "icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
