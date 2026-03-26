@@ -1,10 +1,9 @@
-package com.renzaifei.carpetsdkaddition.rules.dispenserCollectXp;
+package com.renzaifei.carpetsdkaddition.rules;
 
 import com.renzaifei.carpetsdkaddition.CarpetSDKAdditionSettings;
 import com.renzaifei.carpetsdkaddition.api.dispenser.MyFallibleItemDispenserBehavior;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.dispenser.BlockSource;
-import net.minecraft.core.dispenser.DefaultDispenseItemBehavior;
 import net.minecraft.core.dispenser.DispenseItemBehavior;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.ExperienceOrb;
@@ -15,29 +14,15 @@ import net.minecraft.world.phys.AABB;
 
 import java.util.List;
 
-public class GlassBottleDispenserBehavior extends MyFallibleItemDispenserBehavior {
-    private final DefaultDispenseItemBehavior fallbackBehavior = new DefaultDispenseItemBehavior();
+public class dispenserCollectXp extends MyFallibleItemDispenserBehavior {
 
-    public GlassBottleDispenserBehavior(DispenseItemBehavior oldDispenserBehavior) {
+    public dispenserCollectXp(DispenseItemBehavior oldDispenserBehavior) {
         super(oldDispenserBehavior);
     }
 
     public static void init(){
         DispenserBlock.registerBehavior(Items.GLASS_BOTTLE,
-                    new GlassBottleDispenserBehavior(DispenserBlock.DISPENSER_REGISTRY.get(Items.GLASS_BOTTLE)));
-    }
-
-    private ItemStack replaceItem(BlockSource pointer, ItemStack oldItem, ItemStack newItem){
-        oldItem.shrink(1);
-        if (oldItem.isEmpty()){
-            return newItem.copy();
-        }
-
-        if (!pointer.blockEntity().insertItem(newItem.copy()).isEmpty()){
-            this.fallbackBehavior.dispense(pointer,newItem.copy());
-        }
-
-        return oldItem;
+                    new dispenserCollectXp(DispenserBlock.DISPENSER_REGISTRY.get(Items.GLASS_BOTTLE)));
     }
 
     @Override

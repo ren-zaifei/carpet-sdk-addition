@@ -10,6 +10,7 @@ import net.minecraft.world.level.block.DispenserBlock;
 
 public abstract class MyFallibleItemDispenserBehavior extends MyDispenserBehavior{
     private boolean success = false;
+    private final DefaultDispenseItemBehavior fallbackBehavior = new DefaultDispenseItemBehavior();
 
     public MyFallibleItemDispenserBehavior(DispenseItemBehavior oldDispenserBehavior) {
         super(oldDispenserBehavior);
@@ -25,6 +26,20 @@ public abstract class MyFallibleItemDispenserBehavior extends MyDispenserBehavio
         this.playSound(blockSource);
         this.spawnParticles(blockSource,blockSource.state().getValue(DispenserBlock.FACING));
         return itemStack2;
+    }
+
+
+    public ItemStack replaceItem(BlockSource pointer, ItemStack oldItem, ItemStack newItem){
+        oldItem.shrink(1);
+        if (oldItem.isEmpty()){
+            return newItem.copy();
+        }
+
+        if (!pointer.blockEntity().insertItem(newItem.copy()).isEmpty()){
+            this.fallbackBehavior.dispense(pointer,newItem.copy());
+        }
+
+        return oldItem;
     }
 
     public ItemStack dispenseSilently(BlockSource pointer, ItemStack stack) {

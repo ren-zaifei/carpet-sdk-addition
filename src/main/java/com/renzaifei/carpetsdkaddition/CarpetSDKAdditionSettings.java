@@ -51,4 +51,8 @@ public class CarpetSDKAdditionSettings {
 	@Rule(categories = {SDK})
 	public static boolean dispenserCollectXp = false;
 
+	//发射器收集炼药锅
+	@Rule(categories = {SDK})
+	public static boolean dispenserCollectCauldron = false;
+
 }

@@ -31,6 +31,9 @@
   "carpet.rule.forcefullyGenerateOfflineFakePlayer.desc": "Bypass network requests when generating a fake player, and directly generate an offline fake player.",
 
   "carpet.rule.dispenserCollectXp.name": "dispenserCollectXp",
-  "carpet.rule.dispenserCollectXp.desc": "(Code porting to pca)Dispenser use bottle to collect xp."
+  "carpet.rule.dispenserCollectXp.desc": "(Code porting to pca)Dispenser use bottle to collect xp.",
+
+  "carpet.rule.dispenserCollectCauldron.name": "dispenserCollectCauldron",
+  "carpet.rule.dispenserCollectCauldron.desc": "Dispenser use bucket to collect fluid in cauldron."
 
 }

@@ -31,5 +31,8 @@
   "carpet.rule.forcefullyGenerateOfflineFakePlayer.desc": "绕过假人生成时的网络请求，直接生成离线假人",
 
   "carpet.rule.dispenserCollectXp.name": "发射器收集经验",
-  "carpet.rule.dispenserCollectXp.desc": "(移植自pca)在发射器中使用空瓶收集经验"
+  "carpet.rule.dispenserCollectXp.desc": "(移植自pca)在发射器中使用空瓶收集经验",
+
+  "carpet.rule.dispenserCollectCauldron.name": "发射器收集炼药锅",
+  "carpet.rule.dispenserCollectCauldron.desc": "在发射器中使用空桶收集炼药锅中的流体"
 }
